@@ -14,19 +14,36 @@
 
 }
 
-.mobileLinks{
-    position: absolute;
-    top: 100px;
-    right: 0;
-    width: 50%;
-    height: 100vh;
-    background-color: rebeccapurple;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
 
+
+.menuButton,.mobileLinks{
+display: none;
 }
+
+@media (max-width:768px){
+    .links{
+        display: none;
+    }
+    .mobileLinks{
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rebeccapurple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    
+    }
+
+    .menuButton{
+        display: block;
+        cursor: pointer;
+    }
+}
+
