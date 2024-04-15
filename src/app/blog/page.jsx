@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './blog.module.css';
 import PostCard from '@/components/postCard/postCard';
 import Error from 'next/error';
+import { getPosts } from '@/lib/data';
 
 // // FETCH DATA WITH API
 // const getData = async () => {
@@ -22,7 +23,11 @@ import Error from 'next/error';
 // };
 
 const SingleBlogpage = async () => {
-  const posts = await getData();
+  // // FETCH DATA WITH API
+  // const posts = await getData();
+
+  // without API
+  const posts = await getPosts();
 
   return (
     <div className={styles.container}>
